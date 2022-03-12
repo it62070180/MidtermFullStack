@@ -1,0 +1,5 @@
+
+/node_modules
+*.cmd
+*.ps1
+*.json
