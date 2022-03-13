@@ -1,9 +1,9 @@
 import Navber from './component/Navbar';
-import HomePage from './component/home'; 
+import HomePage from './component/pages/homePage'; 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Allcontent from './component/allcontent';
-import Author from './component/Author'
-import Contentdetail from './component/contentdetail';
+import Allcontent from './component/pages/allcontentPage';
+import Author from './component/pages/AuthorPage'
+import Contentdetail from './component/pages/detailPage';
 
 function  App() {
   return (
