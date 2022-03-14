@@ -1,20 +1,43 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { PostAPI } from '../PostAPI'
+// import { PostAPI } from '../PostAPI'
 
 export default function CommentPosts(props) {
     const postId = props.postId;
     const [comment, setComment] = useState([]);
-    const [text, setText] = useState("")
     const [newComment, setNewComment] = useState(null);
 
 
     const addComment = () => {
-      PostAPI(props.postId, "Test999", text).then((response) => {
-        setNewComment(response)
-    })
-    setText("")
+      let commentForm = {
+        post: parseInt(postId),
+        author_name: "",
+        content: ""
+
+      };
+        if(newComment !== ""){
+          commentForm.author_name = "ICU";
+          commentForm.content = newComment;
+          postComment(commentForm);
+          setNewComment("");
+        }
     };
+
+    const postComment = (data) => {
+      var header = {
+        "Content-Type": "application/json",
+        Authorization: 'Basic ZnN3ZDpmc3dkLWNtcw=='
+      }
+      axios.post(
+        `https://fswd-wp.devnss.com/wp-json/wp/v2/comments`,
+        data, 
+        {headers: header}
+      )
+        .then(()=>{
+          getCommentData(postId);
+        })
+
+    }
     
     const CommentDate = (props) => {
         let dateStr = new Date(props.date);
@@ -86,10 +109,9 @@ export default function CommentPosts(props) {
             <input
               type="text"
               className="form-control mx-3"
-              placeholder="Comment ไม่ได้ครับ"
-              disabled
-              value={text}
-              onChange={(event) => setText(event.target.value)}
+              placeholder="Comment Something"
+              value={newComment}
+              onChange={(event) => setNewComment(event.target.value)}
               onKeyPress={(event) => {
                 if (event.key === 'Enter'){
                   addComment()
