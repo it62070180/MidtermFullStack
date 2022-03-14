@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import { PostAPI } from '../PostAPI'
 
 export default function CommentPosts(props) {
     const postId = props.postId;
