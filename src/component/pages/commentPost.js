@@ -86,7 +86,6 @@ export default function CommentPosts(props) {
         const dataComment = data.data.filter((val) => {
           return val.post === parseInt(id);
         });
-        // console.log(dataComment)
         setComment(dataComment);
     };
 
