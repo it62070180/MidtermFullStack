@@ -48,7 +48,7 @@ export default function CommentPosts(props) {
         return comment.map((val, index) => {
           return (
             <div
-              className="d-flex flex-row mt-3  border-bottom border-2"
+              className="d-flex flex-row mt-3 text-white border-bottom border-2"
               key={postId + index}
             >
               <div className="px-3 py-1">
@@ -96,7 +96,7 @@ export default function CommentPosts(props) {
     return (
         <div className="container">
         <div className="p-5 mb-5" style={{ backgroundColor: "#021718" }}>
-          <h2>Comment</h2>
+          <h2 className="text-white ">Comment</h2>
           <div className="d-flex flex-row border-bottom border-3 mt-4 pb-4 px-2">
             <img
               className="rounded-circle"
