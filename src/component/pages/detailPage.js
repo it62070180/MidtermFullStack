@@ -47,7 +47,7 @@ function Contentdetail(){
                   <div
                     className="py-4 px-5"
                     style={{
-                      backgroundColor: "#1F292E",
+                      backgroundColor: "#0E0C0C",
                       color: "white",
                     }}
                   >
@@ -58,10 +58,10 @@ function Contentdetail(){
                       </div>
                     </div>
                   </div>
-                  <div className="py-1" style={{ backgroundColor: "rgb(46,53,56)" }}></div>
+                  <div className="py-3" style={{ backgroundColor: "#263B3C" }}></div>
                   <div
                     className="post-content text-white p-5"
-                    style={{ backgroundColor: "#1F292E" }}
+                    style={{ backgroundColor: "#0E0C0C" }}
                     dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                   ></div>
                 </div>
@@ -73,8 +73,8 @@ function Contentdetail(){
 
 
     return(
-        <div  className="bg-dark fullscreen main"
-        style={{ overflow: "auto"}}>
+        <div  className="fullscreen main"
+        style={{ overflow: "auto", backgroundColor:"#263B3C"}}>
                 <div className="container my-5">
                     <div className="shadowBox">
                         <h1 className=" rainbow rainbow_text_animated ">Hello this is Content Detail Page {post.id}</h1>

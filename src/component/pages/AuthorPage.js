@@ -25,8 +25,10 @@ export default function Author (){
                              author.map(user => {
                                  return (
                                      <div className="col-6 md-4" key={user.id}>
-                                         <div className="card">
-                                            <img src={user.avatar_urls[96]} className="card-img-top" alt=" "/>
+                                         <div className="card bg-secondary" style={{justifyContent: "center",width: "18rem;"}}>
+                                             <div className="text-center">
+                                                 <img src={user.avatar_urls[96]} style={{width:'80%'}}  className="card-img-top" alt=" "/>
+                                             </div>
                                              <div className="card-body">
                                                 <h3 className="card-title">{user.id} </h3>
                                               <h4>Name :{user.name}</h4><br></br>

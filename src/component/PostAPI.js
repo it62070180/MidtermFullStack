@@ -16,17 +16,4 @@ export async function PostAPI(postJson, author, content) {
     var addCommment = await axios.post(URL, param, {headers: header})
     console.log(addCommment.data)
     return addCommment.data
-    
-
-    // fetch(URL, {
-    //     method: 'POST',
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         Authorization: 'Basic ZnN3ZDpmc3dkLWNtcw=='
-    //     },
-    //     body: JSON.stringify(param)
-    // }).then((response) => {
-    //     console.log("new comment added")
-    //     console.log(response)
-    // })
 }

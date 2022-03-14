@@ -5,13 +5,15 @@ import { PostAPI } from '../PostAPI'
 export default function CommentPosts(props) {
     const postId = props.postId;
     const [comment, setComment] = useState([]);
-    const [newComment, setNewComment] = useState([]);
+    const [text, setText] = useState("")
+    const [newComment, setNewComment] = useState(null);
+
 
     const addComment = () => {
-      PostAPI(props.postId, "Test999", newComment).then((response) => {
+      PostAPI(props.postId, "Test999", text).then((response) => {
         setNewComment(response)
     })
-    setNewComment("")
+    setText("")
     };
     
     const CommentDate = (props) => {
@@ -72,7 +74,7 @@ export default function CommentPosts(props) {
 
     return (
         <div className="container">
-        <div className="bg-black p-5 mb-5">
+        <div className="p-5 mb-5" style={{ backgroundColor: "#021718" }}>
           <h2>Comment</h2>
           <div className="d-flex flex-row border-bottom border-3 mt-4 pb-4 px-2">
             <img
@@ -84,9 +86,10 @@ export default function CommentPosts(props) {
             <input
               type="text"
               className="form-control mx-3"
-              placeholder="Add comment"
-              value={newComment}
-              onChange={(event) => setNewComment(event.target.value)}
+              placeholder="Comment ไม่ได้ครับ"
+              disabled
+              value={text}
+              onChange={(event) => setText(event.target.value)}
               onKeyPress={(event) => {
                 if (event.key === 'Enter'){
                   addComment()
@@ -97,7 +100,7 @@ export default function CommentPosts(props) {
               Comment
             </button>
           </div>
-          <CommentPost />
+          <CommentPost newComment={newComment}/>
         </div>
       </div>
     )

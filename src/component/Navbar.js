@@ -5,7 +5,7 @@ import { Nav } from 'react-bootstrap';
 
 const Navber = () => {
     return(
-    <Navbar bg="secondary" variant="dark">
+    <Navbar style={{ backgroundColor: "#061314" }} variant="dark">
         <Container>
         <Navbar.Brand href="/">SIWAX</Navbar.Brand>
         <Nav className="me-auto">
