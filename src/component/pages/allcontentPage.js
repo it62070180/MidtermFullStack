@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState , useEffect } from "react"
 import { Link } from "react-router-dom";
-// import { imm } from './key.js'
 import { posts , categories } from '../url.js'
 
 export default function Allcontent(){
@@ -50,13 +49,6 @@ export default function Allcontent(){
         return <span className="date">{value}</span>;
     };
 
-    const Logsomething = () => {
-        var newurl = post;
-        console.log('This is what we got from post ' + newurl)
-        console.log('This is what we got from category ' + category)
-    }
-
-
 
 const PostCard = () => {
     return post.map((val) => {
@@ -69,7 +61,6 @@ const PostCard = () => {
                     <div className="card border-primary m-2 text-dark">
                         <div className="card-body " style={{height:'100px'}}>
                             <h4 className="card-title">{val.title.rendered}</h4>
-                            {/* <Link to={`/Contentdetail/${val.id}`} className="btn btn-primary">Go to Detail</Link> */}
                         </div>
                             <div className='card-footer'>
                                 <p className='card-text'>
@@ -90,9 +81,6 @@ return (
                  <div className='shadowBox' >
                     <h1 className='rainbow rainbow_text_animated'>Hello this is All Content Page </h1>
                 </div>
-                    <button className='btn btn-danger' type='button' onClick={Logsomething}>
-                        Click me! 
-                    </button>
                 <div className="row pt-2">
                     <div className='col-1 fw-bold text-white'>
                         <p>Category</p>

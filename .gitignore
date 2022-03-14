@@ -3,3 +3,4 @@
 *.cmd
 *.ps1
 *.json
+/build

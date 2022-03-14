@@ -11,12 +11,6 @@ function Contentdetail(){
     const[post, setPost] = useState([]);
     const[author, setAuthor] = useState([]);
 
-    const Logsomething = () =>{
-        console.log("1 Data is "+ post._links.author[0].href)
-        console.log("2 Author is " + author.name)
-        console.log(obj._links.author[0].href)
-    }
-
     const getPostData = (id) =>{
                         fetch(
                             `https://fswd-wp.devnss.com/wp-json/wp/v2/posts/${id}`
@@ -61,7 +55,7 @@ function Contentdetail(){
                   <div className="py-3" style={{ backgroundColor: "#263B3C" }}></div>
                   <div
                     className="post-content text-white p-5"
-                    style={{ backgroundColor: "#0E0C0C" }}
+                    style={{ backgroundColor: "#0E0C0C"}}
                     dangerouslySetInnerHTML={{ __html: post.content.rendered }}
                   ></div>
                 </div>
@@ -77,11 +71,8 @@ function Contentdetail(){
         style={{ overflow: "auto", backgroundColor:"#263B3C"}}>
                 <div className="container my-5">
                     <div className="shadowBox">
-                        <h1 className=" rainbow rainbow_text_animated ">Hello this is Content Detail Page {post.id}</h1>
+                        <h1 className=" rainbow rainbow_text_animated ">Hello this is Content Detail Page</h1>
                     </div>
-                    <button className='btn btn-danger' type='button' onClick={Logsomething}>
-                        Click me! 
-                    </button>
                     <Card/>
                 </div>
             <div className="bg-light-grey p-3">

@@ -20,6 +20,9 @@ export default function Author (){
        return (
            <div className="bg-dark fullscreen main">
                 <div className="container">
+                <div className='shadowBox' >
+                    <h1 className='rainbow rainbow_text_animated'>Hello this is Author Page</h1>
+                </div>
                      <div className="row" style={{justifyContent: "center"}}>
                          {
                              author.map(user => {
