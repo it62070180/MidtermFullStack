@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd71f78b.css",
-    "main.js": "/static/js/main.e9334edd.js",
-    "static/js/787.a12a404e.chunk.js": "/static/js/787.a12a404e.chunk.js",
-    "index.html": "/index.html",
-    "main.fd71f78b.css.map": "/static/css/main.fd71f78b.css.map",
-    "main.e9334edd.js.map": "/static/js/main.e9334edd.js.map",
-    "787.a12a404e.chunk.js.map": "/static/js/787.a12a404e.chunk.js.map"
+    "main.css": "/MidtermFullStack/static/css/main.fd71f78b.css",
+    "main.js": "/MidtermFullStack/static/js/main.69295f61.js",
+    "static/js/787.a12a404e.chunk.js": "/MidtermFullStack/static/js/787.a12a404e.chunk.js",
+    "index.html": "/MidtermFullStack/index.html",
+    "main.fd71f78b.css.map": "/MidtermFullStack/static/css/main.fd71f78b.css.map",
+    "main.69295f61.js.map": "/MidtermFullStack/static/js/main.69295f61.js.map",
+    "787.a12a404e.chunk.js.map": "/MidtermFullStack/static/js/787.a12a404e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd71f78b.css",
-    "static/js/main.e9334edd.js"
+    "static/js/main.69295f61.js"
   ]
 }
