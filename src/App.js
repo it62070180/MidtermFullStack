@@ -12,7 +12,7 @@ function  App() {
     <div className='App'>
     <Navber/>
       <Routes>
-          <Route path="/midtermFullStack" element={<HomePage/>}/>
+          <Route path="/" element={<HomePage/>}/>
           <Route path="/category" element={<Allcontent/>}/>
           <Route path="/contentdetail/:contentdetailId" element={<Contentdetail/>}/>
           <Route path="/Author" element={<Author/>}/>
