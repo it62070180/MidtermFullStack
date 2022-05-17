@@ -6,7 +6,7 @@ export default function HomePage(){
 
     return (
         <Container fluid className='bgImgroud' style={{height: '100vh'}}>
-            <div className='container-fluid'>
+            <div className='container-fluid'style={{backgroundColor:'red'}} >
                 <div className="jumbotron" >
                     <div className="container" style={{paddingTop:'15%'}}>
                         <div className='row'>
